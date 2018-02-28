@@ -12,8 +12,8 @@
   },
   "keywords": [
     "gatsby",
-    "source",
-    "newsapi"
+    "gatsby-source",
+    "gatsby-source-newsapi"
   ],
   "author": "Jacob Thomann",
   "license": "MIT",
