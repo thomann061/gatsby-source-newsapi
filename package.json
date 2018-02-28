@@ -1,0 +1,32 @@
+{
+  "name": "gatsby-source-newsapi",
+  "version": "0.0.1",
+  "description": "Gatsby source plugin for building websites using NewsAPI as a data source",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomann061/gatsby-source-newsapi.git"
+  },
+  "keywords": [
+    "gatsby",
+    "source",
+    "newsapi"
+  ],
+  "author": "Jacob Thomann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thomann061/gatsby-source-newsapi/issues"
+  },
+  "homepage": "https://github.com/thomann061/gatsby-source-newsapi#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "crypto": "^1.0.1",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "jasmine": "^3.1.0"
+  }
+}
