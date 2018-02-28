@@ -10,12 +10,12 @@ exports.sourceNodes = async ({ boundActionCreators }, { apiKey }) => {
 
   // Create nodes here, generally by downloading data
   // from a remote API.
-  const data = await fetchTopHeadlines(apiKey);
+  const data = await fetch(apiKey);
   console.timeEnd(`\nFetch NewsAPI data`)
 
   // Process data into nodes.
   const { articles } = data.data;
-  articles.forEach(article => createNode(processArticle(article)));
+  articles.forEach(article => createNode(process(article)));
 
   // We're done, return.
   return;
