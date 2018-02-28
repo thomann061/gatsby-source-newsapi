@@ -1,7 +1,6 @@
 # gatsby-source-newsapi
 
-Source plugin for pulling data into Gatsby from an unofficial NewsAPI JSON
-endpoint.
+Source plugin for pulling data into Gatsby from [NewsAPI](https://newsapi.org/).
 
 ## Install
 
@@ -23,41 +22,23 @@ plugins: [
 
 ## How to query
 
-Get all posts with the preview image ID and the author's name:
+Get the Top Headlines
 
 ```graphql
-query StoriesQuery {
-  allMediumPost(sort: { fields: [createdAt], order: DESC }) {
+{
+	allNewsApiTopHeadlines {
     edges {
       node {
-        id
-        title
-        virtuals {
-          subtitle
-          previewImage {
-            imageId
-          }
+        source {
+        	id
+        	name
         }
-        author {
-          name
-        }
-      }
-    }
-  }
-}
-```
-
-Get all users with their posts:
-
-```graphql
-query StoriesQuery {
-  allMediumUser {
-    edges {
-      node {
-        name
-        posts {
-          title
-        }
+				title
+        author
+        description
+        url
+        urlToImage
+        publishedAt
       }
     }
   }
