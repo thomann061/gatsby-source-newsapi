@@ -26,14 +26,14 @@ Get the Top Headlines
 
 ```graphql
 {
-	allNewsApiTopHeadlines {
+  allNewsApiTopHeadlines {
     edges {
       node {
         source {
-        	id
-        	name
+          id
+          name
         }
-				title
+        title
         author
         description
         url
