@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-newsapi",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Gatsby source plugin for building websites using NewsAPI as a data source",
   "main": "index.js",
   "scripts": {
