@@ -1,13 +1,12 @@
-const { fetchTopHeadlines, processArticle } = require('../src/gatsby-node');
+const { fetch } = require('../src/fetch');
+const { process } = require('../src/process');
 const { apiKey } = require('../credentials').credentials;
 
 describe('fetchTopHeadlines', () => {
   it('should get top headlines from news api', (done) => {
-    fetchTopHeadlines(apiKey)
-      .then(topHeadlines=> {
-        console.log(topHeadlines.data);
-        const { articles } = topHeadlines.data;
-        //console.log(JSON.stringify(articles, null, 2));
+    fetch(apiKey)
+      .then(res=> {
+        console.log(res.data);
         done()
       })
       .catch(err=> {
@@ -31,6 +30,6 @@ describe('processArticle', () => {
       urlToImage: "https://thenypost.files.wordpress.com/2018/02/trump-mexico-wall-feature.jpg?quality=90&strip=all&w=1200",
       publishedAt: "2018-02-28T13:58:09Z"
     }
-    //console.log(processArticle(JSON.stringify(sampleArticle)));
+    console.log(process(sampleArticle));
   })
 })
